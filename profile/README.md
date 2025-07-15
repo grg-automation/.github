@@ -1,3 +1,5 @@
+- [English](#english)
+
 GRG-Automation — центр компетенций внутри GRG Company, где мы превращаем хаотичные ручные операции клиентов в воспроизводимые сценарии, описанные языком workflow-диаграмм и свёрнутые в контейнеры, способные пережить любые пиковые нагрузки. Наш фокус — n8n и Make (ex-Integromat) как ядро iPaaS-платформы, дополняемое кастомными Node.js-микросервисами, Supabase Edge Functions и очередями Redis RQ. Мы строим строго событийные ландшафты: любые веб-хуки, CRON-триггеры или сообщения Kafka/NATS попадают в единый Redis-стрим, откуда горизонтально масштабируемый пул воркеров подхватывает их, оборачивает в идемпотентные транзакции и, при необходимости, откатывает шаги, гарантируя целостность данных и SLA 99,9 %.
 
 ```mermaid
@@ -56,6 +58,8 @@ flowchart LR
 GRG-Automation — это не только интеграции, но и образовательная платформа: мы проводим открытые воркшопы по сложным кейсам n8n (мульти-тенант SaaS, транзакционные цепочки, fallback-паттерны), публикуем разборы инцидентов в блоге и поддерживаем репозиторий рецептов, где описаны best-practice шаблоны — от «шаблона многоэтапной валидации данных» до «построения сегментации клиентов по RFM-модели».
 
 Если вашему бизнесу нужна надёжная, наблюдаемая и легко расширяемая автоматизация или вы хотите показать скилл на реальных production-проектах. Мы расширяем экосистему каждый день и будем рады новым задачам и новым контрибьюторам.
+
+## English
 
 GRG-Automation is the workflow-engineering arm of GRG Company. We turn ad-hoc, error-prone manual routines into reproducible, fault-tolerant pipelines expressed as workflow JSON and packaged into containers that survive any traffic spike. Our core engine is **n8n**, complemented by Make (ex-Integromat), purpose-built Node.js micro-services, Supabase Edge Functions and Redis RQ queues. Everything is strictly event-driven: incoming webhooks, CRON triggers or Kafka/NATS messages flow into a single Redis stream, from which a horizontally scalable worker pool picks them up, wraps them in idempotent transactions and rolls back failed steps, holding a 99.9 % uptime SLA even under peak load.
 
